@@ -1,0 +1,475 @@
+*{
+padding: 0; 
+margin: 0;
+box-sizing: border-box;
+}
+
+html{
+    /* the co chu */
+    scroll-behavior:smooth;/*Cuon the khi chon*/
+font-family:Helvetica, Arial, sans-serif ;
+/* cai cuoi chung font */
+}
+
+/* 
+1.Từ ngoài vào trong
+2.Từ trên xuống dưới
+3.Từ tổng quan đến chi tiết
+/* 
+1.Vị trí
+2.Kích thước(width,heigth)
+3.Màu sắc
+4.Kiểu dáng(kiểu chữ, hình tròn, vuông...) 
+*/
+#main{
+
+}
+/*Class dung chung*/
+.clear{
+    clear: both;/*Chong lai float om het tat ca*/
+}
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.text-white{
+    color: #fff !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col-full{
+    width: 100%;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 33.3333%;
+}
+.col-half{
+    width: 50%;
+}
+/*Main*/
+#header{
+width:100%;
+height: 46px;
+background-color: black;
+position: fixed;
+top:0;
+left: 0;
+right: 0;
+z-index: 1; 
+/* giup noi the header len */
+}
+
+#nav{
+display:inline-block;
+}
+
+#nav, .subnav{
+ list-style: none;
+}
+
+#nav >li{
+ display: inline-block; 
+}
+
+#nav li{
+    position: relative; 
+}
+
+#nav > li > a{
+    color:#fff;
+    text-transform: uppercase;
+}
+#nav li a{
+    
+    text-decoration:none;
+    line-height: 46px;
+    /* can giua vs header do khung thua cua chu */
+    padding:0 24px;
+     display: inline-block;     
+    /* bo auto di theo line-height */
+}
+
+#nav >li:hover >a ,
+#nav .subnav li:hover{
+color:#000;
+background-color: #ccc;
+cursor: auto;
+}
+
+#nav  li:hover .subnav{
+    display: block;
+    /* di chuot vo hien cap con */
+
+}
+
+#nav .subnav{
+  display:none;  
+/* ẩn li con */
+min-width: 160px;
+position: absolute;
+background-color: #fff;
+box-shadow:0 0 10px rgba(0, 0, 0, 0.4);
+top:100%;
+left:0;
+/* can chinh sub nav */
+}
+
+#nav .subnav a{
+    color:#000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .ti-angle-down{
+    font-size: 12px;
+}
+
+#header .search-buttom{
+float: right;
+cursor: pointer;
+/* hinh ngon tay */
+}
+
+#header .search-buttom:hover{
+background-color: #f44336;
+}
+
+#header .search-icon{
+    line-height: 46px;
+    padding:0 21px;
+    color:#fff;
+    font-size: 20px;
+}
+
+#slide{
+margin-top: 46px;
+padding-top: 50%;
+position: relative;
+/* ty le chieu cao bang 1 nua chieu rong */
+background: url('https://ejoy-english.com/blog/wp-content/uploads/2018/09/%E1%BB%A9ng-d%E1%BB%A5ng-h%E1%BB%8Dc-ti%E1%BA%BFng-anh-1.jpg') top center/ cover no-repeat;
+
+}
+ #slide .text-content{
+position: absolute;
+bottom:48px;
+color:#000;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+ }
+#slide .text-heading{
+     font-weight: 500;
+     font-size: 60px;
+ }
+ #slide .text-discription{
+     font-size: 80px;
+     margin-top: 25px;
+}
+.anh1{
+    height: 300px;
+    width: 100%;
+}
+.anh2{
+    width: 100%;
+    height 200px;
+}
+#content{
+
+}
+#content .content-section{
+    width:800px;
+    padding:64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    /* khoảng cách của chữ */
+    text-align: center;
+}
+
+#content .section-sub-heading
+{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-size: italic;
+    opacity:0.6;/*Độ mờ của chữ*/
+
+}
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;/*Căn đều giữa đoạn text*/
+    line-height: 1.6;
+}
+
+#content .member-list{
+    margin-top: 48px;
+    /* overflow: hidden;/*Day tours date xuong va om chon meber-items*/
+} 
+#content .member-items{
+    /* float: left;
+    width: calc(100% / 3); *//*Nho co col va col-third len ko can dung nua*/
+    text-align: center;
+}
+#content .member-avatar{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+   height: 154px;
+
+}
+#content .member-name{
+    font-size: 15px;
+        
+}
+#content .member-name a{
+    font-size: 15px;
+    color:#000;
+    text-decoration: dashed;
+
+}
+/*Tour-content*/
+.tour-content{
+    background:rgb(143, 143, 254);
+}
+.tickets{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.tickets li{
+    color: #757575;
+    list-style: none;/*Bo di may cai cham cua li*/
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(143, 143, 254);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/*Places*/
+.places-list{
+    margin-top: 32px;
+    padding-bottom: 48px;
+}
+ .place-items{
+    /* float: left;Len thanh chieu ngang */
+    width: 33.33333%;
+     /* padding:0 8px; }  */}
+
+.places-img{
+    width: 100%;/*Ko lam phinh the chua no nua*/
+    display: block;/*Lam mat khoang den giua img va khoi div ben duoi*/
+}
+.places-img:hover{
+    opacity: 0.6;/*Lam mo*/
+}
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+  
+
+}
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+
+}
+.place-time{
+    margin-top: 15px;
+    color:#757575;
+    font-size: 13px;
+}
+.place-contentss{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-tickets-only{
+    color: #fff;
+    background-color: rgb(143, 143, 254);
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;/*Do choc len tren*/
+    margin-top: 15px;
+    border: none;
+}
+.place-tickets-only:hover{
+    color:#000;
+    background-color: #ccc;
+    border: none;
+    height: 38px;
+}
+#footer{
+padding: 64px 16px;
+text-align: center;
+}
+.social-list{
+    font-size: 26px;
+}
+.social-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+
+}
+.social-list a:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+.copy{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background: rgba(0,0,0,0.4);
+    display: none;/*An mua hang di*/
+    align-items: center;
+    justify-content: center;
+}
+.modal.open{
+    display: flex;
+}
+.modal-contents{
+    background:#fff ;
+    width: 900px;
+    max-width: calc(100% - 32px);/*ko bi dinh vao 2 ben vien khi co lai*/
+    min-height:200px ;
+    position: relative;
+    animation: modalDownBy ease 0.5s;
+
+}
+header.modal-header {
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+.modal-close {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    /* top: 0; */
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding:10px;
+    margin-bottom: 24px;
+
+}
+#pay:hover {
+    opacity: 0.9;
+}
+#pay {
+    border: none;
+    color: #fff;
+    background: #009688;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+footer.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+modal-help a {
+    color: #2196F3;
+}
+.contact-content{
+ margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i{
+    width: 30px;
+    margin-right: 8px; 
+}
+.contact-content{
+    font-size: 18px;
+}
+.contact-content .form-control{
+    padding:10px;
+    border: 1px solid #ccc;
+
+}
+.col-full .form-control{
+    padding:10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.form-submit-btn{
+    background-color:rgb(143, 143, 254) ;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+    border: none;
+    height: 38px;
+}
+@keyframes modalDownBy {
+    from{opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
